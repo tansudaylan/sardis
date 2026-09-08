@@ -105,5 +105,9 @@ def init(
                #typepopl='prev', \
               )
 
-    troia.init()
+    if hasattr(dicttroyoutp, '__dict__'):
+        return dicttroyoutp.__dict__
+    if isinstance(dicttroyoutp, dict):
+        return dicttroyoutp
+    return {'result': dicttroyoutp}
 
