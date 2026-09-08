@@ -8,6 +8,33 @@ import troia
 import tdpy
 import nicomedia
 
+
+def retr_pathsard(pathbase=None, strgcnfg=None):
+    """Return normalized Sardis base and output paths."""
+
+    pathbasesard = tdpy.retr_pathbase('sardis')
+    if pathbase is None:
+        pathbase = pathbasesard
+    else:
+        pathbase = tdpy.ensr_path(pathbase)
+
+    pathdatapipe = tdpy.ensr_path(os.path.join(pathbase, 'data'))
+    pathvisupipe = tdpy.ensr_path(os.path.join(pathbase, 'visuals'))
+
+    dictpath = {
+        'pathbasesard': pathbasesard,
+        'pathbase': pathbase,
+        'pathdatapipe': pathdatapipe,
+        'pathvisupipe': pathvisupipe,
+    }
+    if strgcnfg is not None:
+        pathcnfg = tdpy.ensr_path(os.path.join(pathbase, strgcnfg))
+        dictpath['pathcnfg'] = pathcnfg
+        dictpath['pathsimu'] = tdpy.ensr_path(os.path.join(pathcnfg, 'simulation'))
+        dictpath['pathobsd'] = tdpy.ensr_path(os.path.join(pathcnfg, 'observed'))
+
+    return dictpath
+
 def init(
          
          typesyst, \
@@ -40,21 +67,12 @@ def init(
     
     # paths
     ## path of the sardis data folder
-    gdat.pathbasesard = os.environ['SARDIS_DATA_PATH'] + '/'
-    ## base path of the run
-    if gdat.pathbase is None:
-        gdat.pathbase = gdat.pathbasesard
-    
-    gdat.pathdatapipe = gdat.pathbase + 'data/'
-    gdat.pathvisupipe = gdat.pathbase + 'visuals/'
-    
     if gdat.strgcnfg is None:
         gdat.strgcnfg = '%s' % (gdat.typesyst)
 
-    gdat.pathcnfg = gdat.pathbase + gdat.strgcnfg + '/'
-
-    gdat.pathsimu = gdat.pathcnfg + 'simulation/'
-    gdat.pathobsd = gdat.pathcnfg + 'observed/'
+    dictpath = retr_pathsard(pathbase=gdat.pathbase, strgcnfg=gdat.strgcnfg)
+    for attr, valu in dictpath.items():
+        setattr(gdat, attr, valu)
 
     #listtoiitarg = np.loadtxt(path)
 

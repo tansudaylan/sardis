@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sardis/__init__.py
+sardis/main.py
+sardis.egg-info/PKG-INFO
+sardis.egg-info/SOURCES.txt
+sardis.egg-info/dependency_links.txt
+sardis.egg-info/requires.txt
+sardis.egg-info/top_level.txt
+tests/test.py
+tests/test_paths.py

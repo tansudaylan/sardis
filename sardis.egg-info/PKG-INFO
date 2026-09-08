@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: sardis
+Version: 1.0
+Summary: Time-domain exoplanet candidate vetting workflows.
+Home-page: https://github.com/tdaylan/sardis
+Download-URL: https://github.com/tdaylan/sardis
+Author: Tansu Daylan
+Author-email: Tansu Daylan <tansu.daylan@gmail.com>
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: nicomedia
+Requires-Dist: numpy
+Requires-Dist: tdpy
+Requires-Dist: troia
+Dynamic: author
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license-file
+
+# sardis
+
+## Introduction
+sardis is a pipeline to vet exoplanet candidates
+

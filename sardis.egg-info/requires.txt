@@ -1,0 +1,5 @@
+matplotlib
+nicomedia
+numpy
+tdpy
+troia
