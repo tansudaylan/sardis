@@ -37,7 +37,7 @@ def retr_pathsard(pathbase=None, strgcnfg=None):
 
 def init(
          
-         typesyst, \
+         typesyst='PlanetarySystem', \
 
          dicttroiinpt=None, \
          
