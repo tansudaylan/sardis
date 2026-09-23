@@ -7,8 +7,8 @@ setup(
     description = 'Unsupervised learning using data in time-domain astronomy', \
     author = 'Tansu Daylan',
     author_email = 'tansu.daylan@gmail.com',
-    url = 'https://github.com/tdaylan/sardis',
-    download_url = 'https://github.com/tdaylan/sardis', 
+    url = 'https://github.com/tansudaylan/sardis',
+    download_url = 'https://github.com/tansudaylan/sardis',
     license='MIT',
     classifiers=['Development Status :: 4 - Beta',
                  'Intended Audience :: Science/Research',
