@@ -11,7 +11,10 @@ Sardis is a workflow-focused package that uses the shared time-domain infrastruc
 ```bash
 cd /path/to/sardis
 pip install -e .
+export SARDIS_PATH=/path/to/sardis
 ```
+
+`SARDIS_PATH` identifies the repository root. Keep runtime inputs in `data/` and generated pipeline outputs in `visuals/`; both directories are ignored by Git. Existing workflow data-root configuration remains unchanged.
 
 ## Minimal usage
 
