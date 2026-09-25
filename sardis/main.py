@@ -8,11 +8,13 @@ import troia
 import tdpy
 import nicomedia
 
+from .paths import get_repository_path
+
 
 def retr_pathsard(pathbase=None, strgcnfg=None):
     """Return normalized Sardis base and output paths."""
 
-    pathbasesard = tdpy.retr_pathbase('sardis')
+    pathbasesard = tdpy.ensr_path(get_repository_path())
     if pathbase is None:
         pathbase = pathbasesard
     else:

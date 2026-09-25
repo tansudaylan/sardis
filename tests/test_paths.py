@@ -20,7 +20,7 @@ def test_repository_path_is_required(monkeypatch):
 
 
 def test_retr_pathsard_creates_expected_directories(monkeypatch, tmp_path):
-    monkeypatch.setenv('SARDIS_DATA_PATH', str(tmp_path / 'repo'))
+    monkeypatch.setenv('SARDIS_PATH', str(tmp_path / 'repo'))
 
     dictpath = retr_pathsard(strgcnfg='TransitVet')
 
