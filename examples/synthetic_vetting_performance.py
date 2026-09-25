@@ -34,6 +34,7 @@ def run_synthetic_pipeline(pathbase: Path) -> dict:
     ):
         return sardis.init(
             dicttroiinpt=configuration,
+            pathbase=str(pathbase),
             strgcnfg="SyntheticVetting",
         )
 

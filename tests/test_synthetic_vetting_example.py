@@ -30,6 +30,22 @@ def make_result() -> dict:
     }
 
 
+def test_synthetic_pipeline_routes_all_outputs_to_temporary_path(tmp_path, monkeypatch):
+    captured_arguments = {}
+
+    def fake_init(**arguments):
+        captured_arguments.update(arguments)
+        return make_result()
+
+    monkeypatch.setattr(example.sardis, "init", fake_init)
+
+    result = example.run_synthetic_pipeline(tmp_path)
+
+    assert result["typesyst"] == "PlanetarySystem"
+    assert captured_arguments["pathbase"] == str(tmp_path)
+    assert captured_arguments["dicttroiinpt"]["pathbase"] == str(tmp_path)
+
+
 def test_synthetic_vetting_example_writes_nonblank_png(tmp_path, capsys):
     output_path = tmp_path / "synthetic_vetting_performance.png"
 
