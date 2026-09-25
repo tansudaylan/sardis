@@ -5,13 +5,13 @@ import matplotlib.image as mpimg
 import numpy as np
 
 
-EXAMPLE_PATH = (
+EXAMPLE_SCRIPT = (
     Path(__file__).resolve().parents[1]
     / "examples"
     / "synthetic_vetting_performance.py"
 )
 SPECIFICATION = importlib.util.spec_from_file_location(
-    "sardis_synthetic_vetting_example", EXAMPLE_PATH
+    "sardis_synthetic_vetting_example", EXAMPLE_SCRIPT
 )
 example = importlib.util.module_from_spec(SPECIFICATION)
 SPECIFICATION.loader.exec_module(example)
