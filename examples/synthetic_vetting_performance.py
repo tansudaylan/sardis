@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Evaluate Sardis candidate vetting on its seeded synthetic population."""
 
-import argparse
 import contextlib
 import io
 import tempfile
@@ -15,6 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import sardis
+from tdpy.cli import parse_plot_arguments
 
 
 def run_synthetic_pipeline(pathbase: Path) -> dict:
@@ -138,16 +138,10 @@ def run_example(
     return summary
 
 
-def parse_arguments() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
+def parse_arguments():
+    return parse_plot_arguments(
         description="Plot Sardis performance on its seeded synthetic population."
     )
-    parser.add_argument(
-        "--typefileplot",
-        choices=("png", "pdf"),
-        default="png",
-    )
-    return parser.parse_args()
 
 
 def main() -> int:
