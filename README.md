@@ -31,6 +31,3 @@ The figure shows the simulated input population, the low-threshold confusion mat
 ## Outputs and diagnostics
 The package writes its processed data products and visualization outputs under a normalized project path tree rooted in the configured data directory. This keeps the candidate-vetting workflow inspectable and reproducible without hard-coded machine-specific paths.
 
-## Current maintenance status
-The repository is active as a workflow package but remains narrower in scope than the shared numerical and plotting libraries. The supported entry points are the package import surface and the `init()` workflow; legacy exploratory scripts should not be treated as the active API.
-
