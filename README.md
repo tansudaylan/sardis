@@ -1,10 +1,10 @@
 # sardis
 
 ## Purpose
-Sardis is a workflow for exoplanet candidate vetting and occurrence-style evaluation based on time-domain photometric data and related model diagnostics. It acts as a pipeline layer around shared time-domain and modeling functionality rather than as a monolithic analysis script.
+Sardis is a workflow for exoplanet candidate vetting and occurrence-style evaluation based on time-domain photometric data and model diagnostics.
 
-## Repository role in the ecosystem
-Sardis is a workflow-focused package that uses the shared time-domain infrastructure in the broader ecosystem, especially the path conventions and plotting utilities provided by the active scientific stack. It is designed to keep project-specific candidate-vetting logic separate from the lower-level numerical and plotting library layers.
+## Candidate-vetting analysis
+Sardis applies candidate-vetting decisions to target populations, compares those decisions with known or simulated labels, calculates confusion matrices, and evaluates precision-recall tradeoffs across decision thresholds.
 
 ## Installation
 
