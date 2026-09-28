@@ -1,6 +1,6 @@
 # sardis
 
-## Scientific purpose
+## Purpose
 Sardis is a workflow for exoplanet candidate vetting and occurrence-style evaluation based on time-domain photometric data and related model diagnostics. It acts as a pipeline layer around shared time-domain and modeling functionality rather than as a monolithic analysis script.
 
 ## Repository role in the ecosystem
