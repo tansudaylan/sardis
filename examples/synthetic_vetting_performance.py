@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Evaluate Sardis candidate vetting on its seeded synthetic population."""
 
+from tdpy.verbosity import print
+
 import contextlib
 import io
 import tempfile
